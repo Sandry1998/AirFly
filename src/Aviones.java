@@ -3,12 +3,15 @@ public class Aviones {
     String modelo;
     String matricula;
     int capacidad;
+    static int contador=0;
+    int contador0;
 
     //Métodos constructivos
     public Aviones(String modelo, String matricula, int capacidad) {
         this.modelo = modelo;
         this.matricula = matricula;
         this.capacidad = capacidad;
+        this.contador0=++contador;
     }
 
     public String getModelo() {
@@ -37,7 +40,7 @@ public class Aviones {
 
     @Override
     public String toString() {
-        return "Aviones-> " +
+        return "Contador: -> " + contador0 +
                 "\nModelo: " + modelo +
                 "\nMatricula: " + matricula +
                 "\nCapacidad: " + capacidad;

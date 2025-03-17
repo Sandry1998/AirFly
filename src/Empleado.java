@@ -4,12 +4,15 @@ public class Empleado {
     String nombre;
     int Id;
     String departamento;
+    static int contador=0;
+    int contador0;
 
     //Métodos constructivos
     public Empleado(String nombre, int Id, String departamento) {
         this.nombre = nombre;
         this.Id = Id;
         this.departamento = departamento;
+        this.contador0=++contador;
     }
 
     public String getNombre() {
@@ -38,8 +41,8 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado-> " +
-                "Nombre: " + nombre + '\'' +
+        return "Contador -> " + contador0 +
+                "\nNombre: " + nombre +
                 "\nId: " + Id +
                 "\nDepartamento: " + departamento;
 
